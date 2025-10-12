@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PyraTerra — Ecosystem Simulation</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===============================
+       GREEN ECO-THEME BACKGROUND
+       =============================== */
+    body.simulation::before {
+      background:
+        radial-gradient(circle at 35% 30%, rgba(0, 255, 120, 0.9), transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(0, 180, 80, 0.8), transparent 45%),
+        linear-gradient(180deg, rgba(0,30,10,0.8) 0%, rgba(0,0,0,1) 100%);
+      animation: lavaPulse 15s ease-in-out infinite alternate;
+      filter: blur(90px) brightness(1.1);
+    }
+
+    @keyframes lavaPulse {
+      0% { transform: scale(1); opacity: 0.95; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.95; }
+    }
+
+    /* ===============================
+       Simulation Content Styling
+       =============================== */
+    .table-section {
+      margin-top: 20px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 25px rgba(0,255,120,0.25);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.95);
+    }
+
+    th {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    pre {
+      background: rgba(255,255,255,0.04);
+      padding: 12px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      color: #fff;
+      line-height: 1.5;
+      box-shadow: inset 0 0 12px rgba(0,255,120,0.3);
+    }
+
+    /* Section headings and text */
+    .subtitle {
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 22px;
+      margin-bottom: 8px;
+      text-shadow: 0 0 12px rgba(0,255,120,0.8);
+    }
+
+    p {
+      color: rgba(255,255,255,0.9);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body class="simulation fade-in">
+  <header>
+    <h2>PyraTerra</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="education.html">Education</a>
+      <a href="simulation.html" class="active">Simulation</a>
+      <a href="cycles.html">Cycles</a>
+      <a href="output.html">Output</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="headerRow">
+        <!-- Gear icon -->
+        <svg class="icon" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+          <circle cx="32" cy="32" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
+          <path d="M32 2v10M32 52v10M2 32h10M52 32h10M10 10l7 7M47 47l7 7M10 54l7-7M47 17l7-7" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <div>
+          <h1>Ecosystem Simulation</h1>
+          <h2>Food Chains, Energy Conversion & Homeostasis</h2>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="subtitle">🌿 Food Chain (Linear Flow)</div>
+      <p>
+        In PyraTerra, geothermal energy fuels the biosphere, sustaining thermosynthetic producers and the heat-adapted organisms that depend on them.
+      </p>
+
+      <div class="table-section">
+        <table>
+          <tr>
+            <th>Level</th>
+            <th>Organisms</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Producer</td>
+            <td>🌿 Ember Moss, 🌺 Cinder Bloom</td>
+            <td>Convert geothermal heat and minerals into biological energy.</td>
+          </tr>
+          <tr>
+            <td>Primary Consumers</td>
+            <td>🪲 Ember Beetles, 💧 Vapor Birds</td>
+            <td>Feed on producers; transform heat energy into movement and life.</td>
+          </tr>
+          <tr>
+            <td>Secondary Consumers</td>
+            <td>🦎 Lava Lizards</td>
+            <td>Predators that feed on beetles and vapor birds, storing heat energy.</td>
+          </tr>
+          <tr>
+            <td>Tertiary Consumers</td>
+            <td>🦅 Fire Eagles, 🐍 Magma Serpents</td>
+            <td>Top predators maintaining ecosystem stability.</td>
+          </tr>
+          <tr>
+            <td>Decomposers</td>
+            <td>🍄 Lumin Spores, 🧫 Thermobacteria Vulcanis</td>
+            <td>Recycle nutrients and ash, ensuring energy renewal for producers.</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="subtitle">🌐 Food Web (Energy Network)</div>
+      <p>The interconnected relationships among PyraTerra's organisms create a balanced web of geothermal life:</p>
+
+      <pre>
+             🔥 Geothermal Energy
+                      ↓
+   🌿 Ember Moss ───→ 🪲 Ember Beetle ──→ 🦎 Lava Lizard ──→ 🦅 Fire Eagle
+       │                  │                  │
+       ↓                  ↓                  ↓
+   🌺 Cinder Bloom     💧 Vapor Bird      🐍 Magma Serpent
+       ↓                  ↓                  ↓
+🍄 Lumin Spore ←─────────────🧫 Thermobacteria Vulcanis
+      </pre>
+    </div>
+  </main>
+
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="goTo('education.html')">← Previous</button>
+    <button class="nav-btn" onclick="goTo('cycles.html')">Next →</button>
+  </div>
+
+  <footer>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
+      <div class="small-credit">© 2025 PyraTerra Project</div>
+      <div class="small-credit">Simulation Model Concepts</div>
+    </div>
+  </footer>
+
+  <script>
+    function goTo(href){
+      document.body.classList.remove('fade-in');
+      document.body.classList.add('page-exit');
+      setTimeout(()=>window.location.href=href,300);
+    }
+    (function(){
+      const links=document.querySelectorAll('nav a');
+      links.forEach(a=>a.addEventListener('click',function(e){
+        const href=a.getAttribute('href');
+        if(!href||href.startsWith('http')||href.startsWith('#'))return;
+        e.preventDefault();
+        goTo(href);
+      }));
+    })();
+  </script>
+</body>
+</html>

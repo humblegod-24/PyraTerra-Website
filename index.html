@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PyraTerra — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add home-specific styling for cards */
+    .page-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+    .page-card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.35s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+      cursor: pointer;
+    }
+    .page-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.6);
+      background: rgba(255,255,255,0.06);
+    }
+    .page-card svg {
+      width: 56px; height: 56px; color: var(--accent);
+      filter: drop-shadow(0 0 12px var(--accent));
+    }
+    .page-card h3 {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-top: 12px;
+    }
+    .page-card p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+      margin-top: 8px;
+      line-height: 1.45;
+    }
+    .page-card a {
+      display: inline-block;
+      margin-top: 14px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+    .page-card a:hover {
+      background: var(--accent);
+      color: #000;
+      box-shadow: 0 0 15px var(--accent);
+    }
+  </style>
+</head>
+
+<body class="home fade-in">
+  <header>
+  <div class="logo-wrap">
+    <img src="images/PyraterraLogo.jpg" alt="PyraTerra Logo" class="logo">
+  </div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="education.html">Education</a>
+    <a href="simulation.html">Simulation</a>
+    <a href="cycles.html">Cycles</a>
+    <a href="output.html">Output</a>
+  </nav>
+</header>
+
+
+
+
+  <main>
+    <div class="container" role="main">
+      <div class="headerRow">
+        <svg class="icon" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+          <path d="M32 2L8 58h48L32 2z"/>
+        </svg>
+        <div>
+          <h1>PyraTerra</h1>
+          <h2>Turning Heat Into Hope — Explore Our EcoVerse</h2>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="section">
+        <p><strong>PyraTerra</strong> is an imagined volcanic EcoVerse powered by geothermal energy and sustained by environmental innovation.  
+        Explore its ecosystem, educational initiatives, simulations, natural cycles, and creative outputs using the portals below.</p>
+
+        <div class="page-grid">
+          <!-- EcoVerse Profile -->
+          <div class="page-card" onclick="goTo('profile.html')">
+            <svg viewBox="0 0 64 64" fill="currentColor">
+              <path d="M20 2c4 6 8 12 12 18s8 12 12 18v24H20V2z"/>
+            </svg>
+            <h3>EcoVerse Profile</h3>
+            <p>Learn about PyraTerra’s environment, energy system, issues, and sustainability goals.</p>
+            <a href="profile.html">View Page →</a>
+          </div>
+
+          <!-- Eco-Education -->
+          <div class="page-card" onclick="goTo('education.html')">
+            <svg viewBox="0 0 64 64" fill="currentColor">
+              <path d="M8 6h48v52H8z" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 6h48v18H8z" />
+            </svg>
+            <h3>Eco-Education Blueprint</h3>
+            <p>Discover the slogan, key messages, and sustainable education policies inspired by NEEAP and MDGs.</p>
+            <a href="education.html">View Page →</a>
+          </div>
+
+          <!-- Simulation -->
+          <div class="page-card" onclick="goTo('simulation.html')">
+            <svg viewBox="0 0 64 64" fill="currentColor">
+              <circle cx="32" cy="32" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M32 2v10M32 52v10M2 32h10M52 32h10" stroke="currentColor" stroke-width="3"/>
+            </svg>
+            <h3>Ecosystem Simulation</h3>
+            <p>Visualize food webs, energy flow, and thermodynamic balance within PyraTerra’s living systems.</p>
+            <a href="simulation.html">View Page →</a>
+          </div>
+
+          <!-- Cycles -->
+          <div class="page-card" onclick="goTo('cycles.html')">
+            <svg viewBox="0 0 64 64" fill="currentColor">
+              <path d="M32 2C20 20 8 38 32 62c24-24 12-42 0-60z"/>
+            </svg>
+            <h3>Biogeochemical Cycles</h3>
+            <p>See how matter and energy circulate through the Carbon, Nitrogen, and Water cycles of PyraTerra.</p>
+            <a href="cycles.html">View Page →</a>
+          </div>
+
+          <!-- Output -->
+          <div class="page-card" onclick="goTo('output.html')">
+            <svg viewBox="0 0 64 64" fill="currentColor">
+              <rect x="8" y="4" width="48" height="56" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="12" y1="12" x2="52" y2="12" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <h3>Output Format</h3>
+            <p>View the project’s digital infographic presentation and credits from MagmaCore Innovators.</p>
+            <a href="output.html">View Page →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
+      <div class="small-credit">© 2025 PyraTerra Project</div>
+      <div class="small-credit">MagmaCore Innovators</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth fade transition between pages
+    function goTo(href){
+      document.body.classList.remove('fade-in');
+      document.body.classList.add('page-exit');
+      setTimeout(()=>window.location.href=href,300);
+    }
+    (function(){
+      const links=document.querySelectorAll('nav a');
+      links.forEach(a=>a.addEventListener('click',function(e){
+        const href=a.getAttribute('href');
+        if(!href||href.startsWith('http')||href.startsWith('#'))return;
+        e.preventDefault();
+        goTo(href);
+      }));
+    })();
+  </script>
+</body>
+</html>

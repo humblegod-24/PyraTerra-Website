@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PyraTerra — Biogeochemical Cycles</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ==== Extra styles for diagrams and cycle design ==== */
+    .cycle-section {
+      margin-bottom: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+    }
+    .cycle-section h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .cycle-section p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .diagram {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .diagram svg {
+      width: 320px;
+      height: 240px;
+      filter: drop-shadow(0 0 12px var(--accent));
+    }
+    .cycle-box {
+      background: rgba(255,255,255,0.07);
+      padding: 14px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 8px;
+      flex: 1;
+      font-size: 0.9rem;
+    }
+    .cycle-flow {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .arrow {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin: 0 6px;
+      animation: arrowGlow 2s infinite alternate;
+    }
+    @keyframes arrowGlow {
+      0% { opacity: 0.7; transform: translateX(0); }
+      100% { opacity: 1; transform: translateX(3px); }
+    }
+  </style>
+</head>
+
+<body class="cycles fade-in">
+  <header>
+    <h2>PyraTerra</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="education.html">Education</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="cycles.html" class="active">Cycles</a>
+      <a href="output.html">Output</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="headerRow">
+        <svg class="icon" viewBox="0 0 64 64" fill="currentColor">
+          <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+          <path d="M32 4a28 28 0 0 1 0 56" stroke="currentColor" stroke-width="3" fill="none"/>
+        </svg>
+        <div>
+          <h1>Biogeochemical Cycles</h1>
+          <h2>Understanding the flow of matter and energy through PyraTerra’s environment</h2>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <!-- Carbon Cycle -->
+      <div class="cycle-section">
+        <h2>🌋 Carbon Cycle</h2>
+        <p>The Carbon Cycle in PyraTerra revolves around the geothermal release and absorption of carbon. Volcanic vents emit carbon gases that are absorbed by Ember Moss and Cinder Blooms during thermosynthesis. When organisms respire or decompose, carbon is re-released into the atmosphere and recycled back through the molten crust.</p>
+        
+        <div class="cycle-flow">
+          <div class="cycle-box">🔥 Volcanic Emission</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">🌿 Ember Moss / 🌺 Cinder Bloom (Absorption)</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">🦎 Lava Lizard & 🦅 Fire Eagle (Respiration)</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">🍄 Lumin Spore (Decomposition)</div>
+        </div>
+
+        <div class="diagram">
+          <svg viewBox="0 0 200 150">
+            <circle cx="100" cy="75" r="60" stroke="cyan" stroke-width="2" fill="none"/>
+            <text x="90" y="20" fill="cyan" font-size="10">Atmosphere</text>
+            <text x="60" y="80" fill="white" font-size="9">Absorption</text>
+            <text x="110" y="80" fill="white" font-size="9">Respiration</text>
+            <text x="85" y="135" fill="white" font-size="9">Decomposition</text>
+            <polygon points="90,25 110,25 100,10" fill="cyan"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Nitrogen Cycle -->
+      <div class="cycle-section">
+        <h2>⚡ Nitrogen Cycle</h2>
+        <p>In PyraTerra, lightning storms and geothermal plasma convert atmospheric nitrogen into nitrates usable by thermal plants. Decomposers like <strong>Thermobacteria Vulcanis</strong> return nitrogen to the atmosphere, while organisms maintain balance by consuming and releasing nitrogen compounds through biological processes.</p>
+        
+        <div class="cycle-flow">
+          <div class="cycle-box">🌩 Plasma Fixation</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">🌿 Pyra Flora (Nitrate Uptake)</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">🪲 Ember Beetles / 🦎 Lava Lizards (Consumption)</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">🧫 Thermobacteria (Decomposition)</div>
+        </div>
+
+        <div class="diagram">
+          <svg viewBox="0 0 200 150">
+            <ellipse cx="100" cy="75" rx="70" ry="50" stroke="cyan" stroke-width="2" fill="none"/>
+            <text x="40" y="70" fill="white" font-size="9">Nitrogen Fixation</text>
+            <text x="120" y="60" fill="white" font-size="9">Absorption</text>
+            <text x="60" y="120" fill="white" font-size="9">Decomposition</text>
+            <polygon points="100,15 110,35 90,35" fill="cyan"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Water Cycle -->
+      <div class="cycle-section">
+        <h2>💧 Water Cycle</h2>
+        <p>Despite PyraTerra’s fiery terrain, moisture circulates through geothermal condensation and vapor release. Steam rises from magma vents, condenses into mineral-rich rain, and sustains biotic life. Organisms like the <strong>Vapor Bird</strong> and <strong>Lumin Spores</strong> regulate humidity, while underground channels return water to the mantle.</p>
+        
+        <div class="cycle-flow">
+          <div class="cycle-box">🌋 Steam Release</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">☁️ Condensation / Rainfall</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">💧 Absorption by Flora & Fauna</div>
+          <div class="arrow">→</div>
+          <div class="cycle-box">🌫 Evaporation & Return Flow</div>
+        </div>
+
+        <div class="diagram">
+          <svg viewBox="0 0 200 150">
+            <rect x="40" y="100" width="120" height="20" fill="cyan" opacity="0.3"/>
+            <circle cx="100" cy="40" r="20" fill="none" stroke="cyan" stroke-width="2"/>
+            <polygon points="100,60 105,70 95,70" fill="cyan"/>
+            <text x="70" y="35" fill="white" font-size="9">Condensation</text>
+            <text x="70" y="115" fill="white" font-size="9">Oceanic Layer</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="goTo('simulation.html')">← Previous</button>
+    <button class="nav-btn" onclick="goTo('output.html')">Next →</button>
+  </div>
+
+  <footer>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
+      <div class="small-credit">© 2025 PyraTerra Project</div>
+      <div class="small-credit">Biogeochemical Cycle Mapping</div>
+    </div>
+  </footer>
+
+  <script>
+    function goTo(href){
+      document.body.classList.remove('fade-in');
+      document.body.classList.add('page-exit');
+      setTimeout(()=>window.location.href=href,300);
+    }
+    (function(){
+      const links=document.querySelectorAll('nav a');
+      links.forEach(a=>a.addEventListener('click',function(e){
+        const href=a.getAttribute('href');
+        if(!href||href.startsWith('http')||href.startsWith('#'))return;
+        e.preventDefault();
+        goTo(href);
+      }));
+    })();
+  </script>
+</body>
+</html>

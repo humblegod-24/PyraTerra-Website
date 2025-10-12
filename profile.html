@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PyraTerra — EcoVerse Profile</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Map and dominant species styling */
+    .map-container {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .map-container img {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 16px;
+      border: 2px solid rgba(255,120,0,0.4);
+      box-shadow: 0 0 25px rgba(255,80,0,0.4);
+    }
+
+    .dominant-card {
+      background: radial-gradient(circle at 40% 20%, rgba(0,0,0,0.6), rgba(255,100,0,0.15));
+      border: 1px solid rgba(255,140,0,0.3);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      transition: 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dominant-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 25px rgba(255,140,0,0.5);
+    }
+
+    .dominant-card h3 {
+      color: #ffb55e;
+      text-shadow: 0 0 8px rgba(255,160,0,0.8);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .dominant-card img {
+      width: 220px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 0 20px rgba(255,100,0,0.4);
+    }
+
+    .dominant-card p {
+      color: rgba(255,245,230,0.95);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body class="profile fade-in">
+  <header>
+    <h2>PyraTerra</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="education.html">Education</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="cycles.html">Cycles</a>
+      <a href="output.html">Output</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="headerRow">
+        <svg class="icon" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+          <path d="M32 2C15 2 2 15 2 32s13 30 30 30 30-13 30-30S49 2 32 2zm0 8c12 0 22 10 22 22S44 54 32 54 10 44 10 32 20 10 32 10z"/>
+        </svg>
+        <div>
+          <h1>EcoVerse Profile: Planet PyraTerra</h1>
+          <h2>Geothermal harmony between fire, life, and renewal</h2>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <!-- 🌋 Planet Overview -->
+      <div class="section">
+        <div class="subtitle">🌋 Planet Overview</div>
+        <p><strong>PyraTerra</strong> is a geothermal EcoVerse born from fire and sustained by balance. Its crust breathes heat through vents and geysers, while energy is harvested through sustainable geothermal systems.</p>
+
+        <div class="map-container">
+          <img src="images/PyraterraMap.jpg" alt="PyraTerra Ecosystem Map">
+        </div>
+
+        <p>Beneath the molten plains and glass mountains thrive heat-adapted ecosystems — a blend of technology, biology, and renewal.</p>
+      </div>
+
+      <!-- 🌱 Environment and Ecosystem -->
+      <div class="section">
+        <div class="subtitle">🌱 Environment and Ecosystem</div>
+        <p>PyraTerra’s ecosystem functions as a closed-loop biosphere, where geothermal energy drives both biological and mechanical life systems. <em>Ember Moss</em> and <em>Cinder Bloom</em> absorb radiant heat for thermosynthesis, while <em>Ember Beetles</em> and <em>Lava Lizards</em> maintain energy balance through adaptive food webs.</p>
+      </div>
+
+      <!-- 🦎 Dominant Species -->
+      <div class="section">
+        <div class="subtitle">🦎 Dominant Species — Lava Lizard</div>
+        <div class="dominant-card">
+          <img src="images/LavaLizard.png" alt="Lava Lizard">
+          <h3>🦎 The Lava Lizard</h3>
+          <p>The <strong>Lava Lizard</strong> reigns as PyraTerra’s keystone predator. Its obsidian-like armor absorbs geothermal heat, allowing it to thrive across lava plains and rocky craters. By preying on both Ember Beetles and Vapor Birds, it maintains the delicate thermobiological balance of the ecosystem.</p>
+        </div>
+      </div>
+
+      <!-- ⚙️ Energy System -->
+      <div class="section">
+        <div class="subtitle">⚙️ Energy System</div>
+        <p>Energy on PyraTerra is sourced from deep geothermal wells and plasma vents. These power both ecological and technological systems.</p>
+      </div>
+
+      <!-- 🔥 Environmental Issues -->
+      <div class="section">
+        <div class="subtitle">🔥 Environmental Issues</div>
+        <p>Continuous geothermal extraction has caused localized imbalances: overpressure in magma chambers, temperature fluctuations, and vent eruptions. Sulfur gases threaten PyraTerra’s oxygen equilibrium, challenging life to adapt faster than the environment changes.</p>
+      </div>
+
+      <!-- 🌎 Sustainable Development Goals -->
+      <div class="section">
+        <div class="subtitle">🌎 Sustainable Development Goals (SDGs)</div>
+        <ul>
+          <li><strong>Goal 7:</strong> Ensure access to reliable, sustainable energy.</li>
+          <li><strong>Goal 13:</strong> Combat climate and heat imbalance.</li>
+          <li><strong>Goal 15:</strong> Protect and promote life on volcanic terrain.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="goTo('index.html')">← Home</button>
+    <button class="nav-btn" onclick="goTo('education.html')">Next →</button>
+  </div>
+
+  <footer>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
+      <div class="small-credit">© 2025 PyraTerra Project</div>
+      <div class="small-credit">EcoVerse Profile — MagmaCore Innovators</div>
+    </div>
+  </footer>
+
+  <script>
+    function goTo(href){
+      document.body.classList.remove('fade-in');
+      document.body.classList.add('page-exit');
+      setTimeout(()=>window.location.href=href,300);
+    }
+    (function(){
+      const links=document.querySelectorAll('nav a');
+      links.forEach(a=>a.addEventListener('click',function(e){
+        const href=a.getAttribute('href');
+        if(!href||href.startsWith('http')||href.startsWith('#'))return;
+        e.preventDefault();
+        goTo(href);
+      }));
+    })();
+  </script>
+</body>
+</html>

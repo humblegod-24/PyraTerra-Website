@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PyraTerra — Output Format</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="output fade-in">
+  <header>
+    <h2>PyraTerra</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="education.html">Education</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="cycles.html">Cycles</a>
+      <a href="output.html" class="active">Output</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="headerRow">
+        <!-- sheet icon -->
+        <svg class="icon" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+          <rect x="8" y="4" width="48" height="56" fill="none" stroke="currentColor" stroke-width="2"/>
+          <line x1="12" y1="12" x2="52" y2="12" stroke="currentColor" stroke-width="2"/>
+          <line x1="12" y1="20" x2="52" y2="20" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <div>
+          <h1>Output Format</h1>
+          <h2>Digital Infographic — deliverables & credits</h2>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="section">
+        <p><strong>Chosen Product:</strong> Digital Infographic (Canva, Figma, or interactive HTML) that showcases:</p>
+        <ul>
+          <li>PyraTerra ecosystem layout and geothermal network</li>
+          <li>Food chain / food web diagrams and energy flow arrows</li>
+          <li>Biogeochemical cycle visuals (carbon, nitrogen, water)</li>
+          <li>NEEAP-inspired education highlights and policy summary</li>
+          <li>Slogan, key messages, and sustainability goals</li>
+        </ul>
+
+        <div class="subtitle">Credits (small)</div>
+        <p class="small-credit">Prepared by MagmaCore Innovators — Jade M. Baguingco; John Rick P. Yanoyan; Bianca Jean J. Igoy; Pearl Angeline Badilla; Joseph Baan Y. Ending; Jiea May R. Abuton · EnviSci Midterm · Instructor: Sheryl Lynn M. Quilab</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
+      <div class="small-credit">© 2025 PyraTerra Project</div>
+      <div class="small-credit">MagmaCore Innovators · USTP-Oroquieta</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const links = document.querySelectorAll('nav a');
+      links.forEach(a => a.addEventListener('click', function(e){
+        const href = a.getAttribute('href');
+        if(!href || href.startsWith('http') || href.startsWith('#')) return;
+        e.preventDefault();
+        document.body.classList.remove('fade-in'); document.body.classList.add('page-exit');
+        setTimeout(()=> window.location.href = href, 300);
+      }));
+    })();
+  </script>
+</body>
+</html>
