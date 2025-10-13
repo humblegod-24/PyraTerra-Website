@@ -52,6 +52,11 @@
     </div>
   </main>
 
+  <!-- ✅ Only previous button -->
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="goTo('cycles.html')">← Previous</button>
+  </div>
+
   <footer>
     <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
       <div class="small-credit">© 2025 PyraTerra Project</div>
@@ -60,14 +65,19 @@
   </footer>
 
   <script>
+    function goTo(href){
+      document.body.classList.remove('fade-in');
+      document.body.classList.add('page-exit');
+      setTimeout(()=> window.location.href = href, 300);
+    }
+
     (function(){
       const links = document.querySelectorAll('nav a');
       links.forEach(a => a.addEventListener('click', function(e){
         const href = a.getAttribute('href');
         if(!href || href.startsWith('http') || href.startsWith('#')) return;
         e.preventDefault();
-        document.body.classList.remove('fade-in'); document.body.classList.add('page-exit');
-        setTimeout(()=> window.location.href = href, 300);
+        goTo(href);
       }));
     })();
   </script>
