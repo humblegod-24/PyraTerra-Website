@@ -2,65 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>PyraTerra — Output Format</title>
+  <title>PyraTerra — Eco-Education Blueprint</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="output fade-in">
+
+<body class="education fade-in">
   <header>
     <h2>PyraTerra</h2>
     <nav>
       <a href="index.html">Home</a>
       <a href="profile.html">Profile</a>
-      <a href="education.html">Education</a>
+      <a href="education.html" class="active">Education</a>
       <a href="simulation.html">Simulation</a>
       <a href="cycles.html">Cycles</a>
-      <a href="output.html" class="active">Output</a>
+      <a href="output.html">Output</a>
     </nav>
   </header>
 
   <main>
     <div class="container">
       <div class="headerRow">
-        <!-- sheet icon -->
         <svg class="icon" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
-          <rect x="8" y="4" width="48" height="56" fill="none" stroke="currentColor" stroke-width="2"/>
-          <line x1="12" y1="12" x2="52" y2="12" stroke="currentColor" stroke-width="2"/>
-          <line x1="12" y1="20" x2="52" y2="20" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 6h48v52H8z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 6h48v18H8z" />
         </svg>
         <div>
-          <h1>Output Format</h1>
-          <h2>Digital Infographic — deliverables & credits</h2>
+          <h1>Eco-Education Blueprint</h1>
+          <h2>“Turning Heat Into Hope” — messages, policy, and MDG links</h2>
         </div>
       </div>
 
       <div class="sep"></div>
 
       <div class="section">
-        <p><strong>Chosen Product:</strong> Digital Infographic (Canva, Figma, or interactive HTML) that showcases:</p>
+        <div class="subtitle">Logo & Slogan</div>
+        <p><strong>Slogan:</strong> <em>“Turning Heat Into Hope”</em></p>
+        <p><strong>Logo (described):</strong> A glowing red mountain shaped like a flame with green roots at the base — representing the balance between destructive and life-giving forces.</p>
+
+        <div class="subtitle">Key Messages for Citizens</div>
         <ul>
-          <li>PyraTerra ecosystem layout and geothermal network</li>
-          <li>Food chain / food web diagrams and energy flow arrows</li>
-          <li>Biogeochemical cycle visuals (carbon, nitrogen, water)</li>
-          <li>NEEAP-inspired education highlights and policy summary</li>
-          <li>Slogan, key messages, and sustainability goals</li>
+          <li>“Heat gives life — protect it, don’t waste it.”</li>
+          <li>“Nature’s fire can power the future.”</li>
+          <li>“Clean energy begins beneath our feet.”</li>
         </ul>
 
-        <div class="subtitle">Credits (small)</div>
-        <p class="small-credit">Prepared by MagmaCore Innovators — Jade M. Baguingco; John Rick P. Yanoyan; Bianca Jean J. Igoy; Pearl Angeline Badilla; Joseph Baan Y. Ending; Jiea May R. Abuton · EnviSci Midterm · Instructor: Sheryl Lynn M. Quilab</p>
+        <div class="subtitle">NEEAP-inspired Policy</div>
+        <p>PyraTerra enforces an <strong>Eco-Energy Education Week</strong>, where citizens use a VR-based platform to simulate managing geothermal resources responsibly. Participants learn energy conservation, pollution control, and sustainable development through interactive challenges.</p>
+
+        <div class="subtitle">Relevant MDGs</div>
+        <ul>
+          <li><strong>MDG 7:</strong> Ensure environmental sustainability.</li>
+          <li><strong>MDG 9:</strong> Build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation.</li>
+        </ul>
       </div>
     </div>
   </main>
 
-  <!-- ✅ Only previous button -->
   <div class="nav-buttons">
-    <button class="nav-btn" onclick="goTo('cycles.html')">← Previous</button>
+    <button class="nav-btn" onclick="goTo('profile.html')">← Previous</button>
+    <button class="nav-btn" onclick="goTo('simulation.html')">Next →</button>
   </div>
 
   <footer>
     <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
       <div class="small-credit">© 2025 PyraTerra Project</div>
-      <div class="small-credit">MagmaCore Innovators · USTP-Oroquieta</div>
+      <div class="small-credit">Eco-Energy Education Week</div>
     </div>
   </footer>
 
@@ -68,7 +75,7 @@
     function goTo(href){
       document.body.classList.remove('fade-in');
       document.body.classList.add('page-exit');
-      setTimeout(()=> window.location.href = href, 300);
+      setTimeout(()=>window.location.href=href,300);
     }
 
     (function(){
